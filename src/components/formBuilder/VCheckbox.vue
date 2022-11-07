@@ -1,6 +1,6 @@
 <template>
   <v-select
-    @change="handleInput"
+    @update:modelValue="handleInput"
     :model-value="value"
     :items="items"
     :name="name"
@@ -40,8 +40,7 @@ export default defineComponent({
     }
   },
   methods: {
-    handleInput (e: any) {
-      const value = e.target.value
+    handleInput (value: any) {
       this.$emit('input', { value, name: this.name })
     }
   }

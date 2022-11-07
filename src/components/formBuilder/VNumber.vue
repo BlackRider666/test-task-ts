@@ -1,6 +1,8 @@
 <template>
   <v-text-field
     type="number"
+    step="any"
+    min="0"
     :label="label?label:''"
     :value="value"
     :name="name"

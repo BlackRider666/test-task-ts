@@ -9,4 +9,5 @@ export default interface Car {
   airSuspension: boolean,
   exterior:Exterior,
   interior: Interior
+  [key: string]: any
 }

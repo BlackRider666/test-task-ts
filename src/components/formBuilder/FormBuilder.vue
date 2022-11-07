@@ -9,7 +9,7 @@
             </template>
           </template>
           <template v-else>
-            <component :is="typeof item" :value="item" :name="key" :label="key.toUpperCase()"></component>
+            <component :is="typeof item" :value="item" :name="key" :label="key.toUpperCase()" @input="changeInputHandler"></component>
           </template>
         </template>
       </v-form>

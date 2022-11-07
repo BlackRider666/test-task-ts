@@ -2,48 +2,7 @@
   <v-row>
       <v-col cols="6">
         <span class="text-h5">Cars List</span>
-        <v-dialog
-          v-model="addDialog"
-          fullscreen
-          :scrim="false"
-        >
-          <template v-slot:activator="{ props }">
-            <v-btn
-              color="primary"
-              dark
-              v-bind="props"
-            >
-              Add Car
-            </v-btn>
-          </template>
-          <v-card>
-              <v-toolbar
-                dark
-                color="primary"
-              >
-                <v-btn
-                  icon
-                  dark
-                  @click="addDialog = false"
-                >
-                  <v-icon>mdi-close</v-icon>
-                </v-btn>
-                <v-toolbar-title>Add Car</v-toolbar-title>
-                <v-spacer></v-spacer>
-                <v-toolbar-items>
-                  <v-btn
-                    variant="text"
-                    @click="addDialog = false"
-                  >
-                    Save
-                  </v-btn>
-                </v-toolbar-items>
-              </v-toolbar>
-            <v-card-text>
-            <AddCar></AddCar>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
+        <AddCar/>
         <v-list>
           <v-list-item
             :class="{ active: index === currentIndex }"
